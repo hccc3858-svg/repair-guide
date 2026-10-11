@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dorm Repairs &amp; Electricity in China — A Guide for International Students</title>
+<title>Dorm Repairs &amp; Electricity in China — 宿舍报修与用电指南</title>
 <style>
   :root{
     --navy:#0f2a43;
@@ -58,6 +58,14 @@
     color:#cfe0f1;
     font-size:1.02rem;
   }
+  .lang-btn{
+    position:fixed; top:12px; right:12px; z-index:20;
+    background:#ffffff; color:var(--navy);
+    border:1px solid var(--line); border-radius:999px;
+    padding:7px 14px; font-weight:700; font-size:.85rem;
+    cursor:pointer; box-shadow:0 2px 10px rgba(16,42,67,.22);
+  }
+  .lang-btn:hover{background:var(--accent-soft);}
   .wrap{max-width:860px;margin:0 auto;padding:0 18px 60px;}
   .question{
     background:var(--accent-soft);
@@ -147,6 +155,9 @@
     font-size:.85rem;
     padding:20px 18px 44px;
   }
+  /* 语言切换：body 带 lang-zh 时显示中文，隐藏英文；反之亦然 */
+  body:not(.lang-zh) .zh{display:none !important;}
+  body.lang-zh .en{display:none !important;}
   @media (max-width:520px){
     .hero h1{font-size:1.5rem;}
     th,td{padding:8px 8px;font-size:.86rem;}
@@ -155,14 +166,23 @@
 </head>
 <body>
 
+<button class="lang-btn" id="langBtn" type="button">中文</button>
+
 <header class="hero">
-  <span class="kicker">International Student Guide</span>
-  <h1>Dorm Repairs &amp; Electricity in China</h1>
-  <p class="sub">A short, practical answer for international students who need help with a broken socket, light or air conditioner.</p>
+  <span class="kicker en">International Student Guide</span>
+  <span class="kicker zh">国际学生指南</span>
+  <h1>
+    <span class="en">Dorm Repairs &amp; Electricity in China</span>
+    <span class="zh">宿舍报修与用电指南</span>
+  </h1>
+  <p class="sub">
+    <span class="en">A short, practical answer for international students who need help with a broken socket, light or air conditioner.</span>
+    <span class="zh">一份简明实用的指南，帮助需要报修插座、灯或空调的国际学生。</span>
+  </p>
 </header>
 
-<div class="wrap">
-
+<!-- ============ ENGLISH ============ -->
+<div class="wrap en">
   <div class="question">
     <span class="qlabel">The question</span>
     <p>“The socket, light, or air conditioner in my room is not working. How do I request a repair?”</p>
@@ -248,25 +268,145 @@
   <section class="card sources">
     <h2><span class="ico">📚</span>Sources</h2>
     <ol>
-      <li>Electrical Safety First (UK) — “China” travel advice: <a href="https://www.electricalsafetyfirst.org.uk/safety-advice/travel-advice/china/">electricalsafetyfirst.org.uk/safety-advice/travel-advice/china</a></li>
+      <li>Electrical Safety First (UK) — “China” travel advice: <a href="https://www.electricalsafetyfirst.org.uk/safety-advice/travel-advice/china/">electricalsafetyfirst.org.uk</a></li>
       <li>China Daily — “What types of power plugs do they have in China?”: <a href="https://govt.chinadaily.com.cn/s/202508/13/WS689c310e498edec913ce09c7/what-types-of-power-plugs-do-they-have-in-china-do-i-need-to-take-a-plug-adaptor-with-me-when-i-travel-in-china.html">govt.chinadaily.com.cn</a></li>
-      <li>Travel China Guide — “Power Plugs / Sockets in China”: <a href="https://www.travelchinaguide.com/essential/electricity.htm">travelchinaguide.com/essential/electricity.htm</a></li>
+      <li>Travel China Guide — “Power Plugs / Sockets in China”: <a href="https://www.travelchinaguide.com/essential/electricity.htm">travelchinaguide.com</a></li>
       <li>AC Infinity — “The Different Travel Adapters You Need in Other Countries” (country voltage/plug comparison): <a href="https://acinfinity.com/blog/the-different-travel-adapters-you-need-in-other-countries/">acinfinity.com/blog</a></li>
       <li>Beijing Foreign Studies University — International Students Dormitory FAQ (report channels): <a href="https://lb.bfsu.edu.cn/info/2912/4961.htm">lb.bfsu.edu.cn/info/2912/4961.htm</a></li>
       <li>Tsinghua University — International Student Apartments Accommodation Guide (WeChat online-repair process): <a href="https://is.tsinghua.edu.cn/zhongwen-qinghuadaxueguojixueshenggongyuzhusushenghuozhinan.pdf">is.tsinghua.edu.cn (PDF)</a></li>
       <li>Zhejiang University International Campus — Campus Operation Center FAQs: <a href="https://coc.intl.zju.edu.cn/en/content/879595">coc.intl.zju.edu.cn/en/content/879595</a></li>
     </ol>
   </section>
+</div>
 
-  <div class="qr-block">
-    <img src="qr-code.png" alt="QR code — scan to open this page">
-    <p>Scan to open this page</p>
+<!-- ============ 中文 ============ -->
+<div class="wrap zh">
+  <div class="question">
+    <span class="qlabel">问题</span>
+    <p>“我房间里的插座、灯或者空调不工作了，我该如何申请报修？”</p>
   </div>
 
-  <footer>
-    Prepared by Group 4 · English class project · Updated Oct 2026
-  </footer>
+  <section class="card">
+    <h2><span class="ico">🔧</span>如何报修</h2>
+    <p class="lead">大多数中国大学都支持通过以下三种渠道之一报修，用你学校提供的任意一种即可——紧急情况去楼栋前台最快。</p>
+
+    <div class="channel">
+      <h3>1 · 楼栋前台 / 值班室 <span class="tag">（宿管 / 值班室）</span></h3>
+      <p>去你宿舍楼的前台（通常在底层），告诉工作人员你的房间号和坏的是什么。紧急情况——比如整间房停电或漏水——要立刻当面报修或拨打值班电话。</p>
+    </div>
+
+    <div class="channel">
+      <h3>2 · 线上报修平台 <span class="tag">（网上报修）</span></h3>
+      <p>大多数学校在官方微信公众号、小程序或 App 里都有报修入口（找“报修”二字）。填写楼栋和房间号、选择类型（用电 / 灯 / 空调）、描述故障、留下联系方式（能拍照更好），然后提交。你会得到一个报修单，并可在线跟踪进度。</p>
+    </div>
+
+    <div class="channel">
+      <h3>3 · 报修热线 / 公寓服务中心 <span class="tag">（后勤报修热线）</span></h3>
+      <p>很多学校会公布报修或后勤服务热线。国际学生也可以向留学生办公室或国际服务中心求助。</p>
+    </div>
+
+    <h2 style="margin-top:26px;"><span class="ico">📋</span>接下来的流程</h2>
+    <ol class="steps">
+      <li data-n="1">你提交报修申请（当面、线上或电话）。</li>
+      <li data-n="2">维修部门审核订单（接单）并派单给维修师傅。</li>
+      <li data-n="3">维修师傅上门——一般故障通常在 24–48 小时内处理完。</li>
+      <li data-n="4">修好后你确认结果（有些平台还可以评价）。</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">🗣️</span>常用中文表达</h2>
+    <p class="lead">你可以把这些句子给前台工作人员看，或直接填进报修表单。</p>
+    <table>
+      <thead><tr><th>意思</th><th>中文</th><th>拼音</th></tr></thead>
+      <tbody>
+        <tr><td>插座坏了</td><td>我的插座坏了</td><td class="pinyin">wǒ de chāzuò huài le</td></tr>
+        <tr><td>灯不亮了</td><td>我的灯不亮了</td><td class="pinyin">wǒ de dēng bú liàng le</td></tr>
+        <tr><td>空调不工作了</td><td>我的空调不工作了</td><td class="pinyin">wǒ de kōngtiáo bù gōngzuò le</td></tr>
+        <tr><td>我要报修</td><td>我要报修</td><td class="pinyin">wǒ yào bàoxiū</td></tr>
+        <tr><td>我住在 X 号楼 X 房间</td><td>我住在 X 号楼 X 房间</td><td class="pinyin">wǒ zhù zài X hào lóu X fángjiān</td></tr>
+        <tr><td>什么时候能来修？</td><td>什么时候能来修？</td><td class="pinyin">shénme shíhou néng lái xiū?</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">⚡</span>中国用电常识</h2>
+    <ul class="tips">
+      <li><strong>电压：</strong>220 V</li>
+      <li><strong>频率：</strong>50 Hz</li>
+      <li><strong>插座 / 插头类型：</strong>A、C、I 型——其中 I 型（三脚扁插，呈“V”形）最常见。</li>
+    </ul>
+
+    <div class="warn">
+      <strong>⚠ 先检查你的电器。</strong>如果你从 100–120 V 的国家（如美国、日本）带了充电器或电器，确认它标着 <em>“100–240 V”</em>（大多数手机、笔记本充电器都支持）。如果只标 <em>“120 V”</em>，就需要电压转换器，直接插会烧坏设备。
+    </div>
+
+    <div class="note">
+      <strong>💡 报修“插座坏了”之前：</strong>先用另一个电器试试同一个插座，并检查房间里的空气开关是否跳闸了（把开关拨回 ON）。这样常常不用等维修就能解决问题。
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">🌍</span>中国与其他国家的对比</h2>
+    <p class="lead">为什么重要：在别的国家买的电器，电压或插头可能和中国的对不上。</p>
+    <table>
+      <thead><tr><th>国家 / 地区</th><th>电压</th><th>频率</th><th>插头类型</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td>中国 🇨🇳</td><td>220 V</td><td>50 Hz</td><td>A, C, I</td></tr>
+        <tr><td>美国 🇺🇸</td><td>120 V</td><td>60 Hz</td><td>A, B</td></tr>
+        <tr><td>英国 🇬🇧</td><td>230 V</td><td>50 Hz</td><td>G</td></tr>
+        <tr><td>日本 🇯🇵</td><td>100 V</td><td>50 / 60 Hz</td><td>A, B</td></tr>
+        <tr><td>德国 🇩🇪</td><td>230 V</td><td>50 Hz</td><td>C, F</td></tr>
+        <tr><td>澳大利亚 🇦🇺</td><td>230 V</td><td>50 Hz</td><td>I</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card sources">
+    <h2><span class="ico">📚</span>资料来源</h2>
+    <ol>
+      <li>英国 Electrical Safety First —— “中国”出行建议：<a href="https://www.electricalsafetyfirst.org.uk/safety-advice/travel-advice/china/">electricalsafetyfirst.org.uk</a></li>
+      <li>中国日报网 —— “中国有哪些类型的电源插头？”：<a href="https://govt.chinadaily.com.cn/s/202508/13/WS689c310e498edec913ce09c7/what-types-of-power-plugs-do-they-have-in-china-do-i-need-to-take-a-plug-adaptor-with-me-when-i-travel-in-china.html">govt.chinadaily.com.cn</a></li>
+      <li>Travel China Guide —— “中国的电源插头 / 插座”：<a href="https://www.travelchinaguide.com/essential/electricity.htm">travelchinaguide.com</a></li>
+      <li>AC Infinity —— “去其它国家需要的不同旅行转换插头”（各国电压 / 插头对比）：<a href="https://acinfinity.com/blog/the-different-travel-adapters-you-need-in-other-countries/">acinfinity.com/blog</a></li>
+      <li>北京外国语大学 —— 国际学生宿舍常见问题解答（报修渠道）：<a href="https://lb.bfsu.edu.cn/info/2912/4961.htm">lb.bfsu.edu.cn/info/2912/4961.htm</a></li>
+      <li>清华大学 —— 国际学生公寓住宿指南（微信网上报修流程）：<a href="https://is.tsinghua.edu.cn/zhongwen-qinghuadaxueguojixueshenggongyuzhusushenghuozhinan.pdf">is.tsinghua.edu.cn (PDF)</a></li>
+      <li>浙江大学国际校区 —— 校园运营中心常见问题：<a href="https://coc.intl.zju.edu.cn/en/content/879595">coc.intl.zju.edu.cn/en/content/879595</a></li>
+    </ol>
+  </section>
 </div>
+
+<div class="qr-block">
+  <img src="qr-code.png" alt="QR code — scan to open this page">
+  <p>
+    <span class="en">Scan to open this page</span>
+    <span class="zh">扫码打开本页面</span>
+  </p>
+</div>
+
+<footer>
+  <span class="en">Prepared by Group 4 · English class project · Updated Oct 2026</span>
+  <span class="zh">第 4 组制作 · 英语课作业 · 更新于 2026 年 10 月</span>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('langBtn');
+  function render() {
+    var zh = document.body.classList.contains('lang-zh');
+    btn.textContent = zh ? 'English' : '中文';
+    document.documentElement.lang = zh ? 'zh-CN' : 'en';
+  }
+  btn.addEventListener('click', function () {
+    document.body.classList.toggle('lang-zh');
+    try { localStorage.setItem('lang', document.body.classList.contains('lang-zh') ? 'zh' : 'en'); } catch (e) {}
+    render();
+  });
+  try { if (localStorage.getItem('lang') === 'zh') document.body.classList.add('lang-zh'); } catch (e) {}
+  render();
+})();
+</script>
 
 </body>
 </html>
