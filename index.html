@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dorm Repairs &amp; Electricity in China — A Guide for International Students</title>
+<style>
+  :root{
+    --navy:#0f2a43;
+    --navy-2:#16406b;
+    --accent:#f5b301;
+    --accent-soft:#fff3cd;
+    --bg:#f4f6f9;
+    --card:#ffffff;
+    --text:#21303f;
+    --muted:#5b6b7b;
+    --line:#e3e8ef;
+    --ok:#0d7a4f;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.6;
+    font-size:16px;
+  }
+  a{color:var(--navy-2);}
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1d5b8f 100%);
+    color:#fff;
+    padding:44px 20px 40px;
+    text-align:center;
+  }
+  .hero .kicker{
+    display:inline-block;
+    background:var(--accent);
+    color:#3a2b00;
+    font-weight:700;
+    font-size:.78rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:14px;
+  }
+  .hero h1{
+    margin:0 auto 10px;
+    max-width:720px;
+    font-size:1.9rem;
+    line-height:1.25;
+  }
+  .hero p.sub{
+    margin:0 auto;
+    max-width:620px;
+    color:#cfe0f1;
+    font-size:1.02rem;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 18px 60px;}
+  .question{
+    background:var(--accent-soft);
+    border-left:5px solid var(--accent);
+    border-radius:10px;
+    padding:18px 20px;
+    margin:26px 0 8px;
+    font-size:1.08rem;
+  }
+  .question .qlabel{font-weight:700;color:#7a5a00;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:6px;}
+  .question p{margin:0;font-weight:600;color:#3a2b00;}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px 22px;
+    margin:18px 0;
+    box-shadow:0 1px 2px rgba(16,42,67,.05);
+  }
+  h2{
+    font-size:1.35rem;
+    margin:0 0 6px;
+    color:var(--navy);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  h2 .ico{font-size:1.2rem;}
+  .lead{color:var(--muted);margin:0 0 14px;}
+  ol.steps,ul.tips{margin:8px 0 4px;padding-left:0;list-style:none;}
+  ol.steps>li,ul.tips>li{
+    position:relative;
+    padding:0 0 0 34px;
+    margin:10px 0;
+  }
+  ol.steps>li::before{
+    content:attr(data-n);
+    position:absolute;left:0;top:1px;
+    width:24px;height:24px;border-radius:50%;
+    background:var(--navy-2);color:#fff;
+    font-size:.8rem;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  ul.tips>li::before{content:"✓";position:absolute;left:2px;top:1px;color:var(--ok);font-weight:700;}
+  .channel{
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px 16px;
+    margin:12px 0;
+    background:#fafcff;
+  }
+  .channel h3{margin:0 0 4px;font-size:1.05rem;color:var(--navy-2);}
+  .channel .tag{font-weight:700;color:var(--accent);font-size:.8rem;letter-spacing:.04em;}
+  .channel p{margin:6px 0 0;color:var(--text);}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:12px 0 4px;}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);}
+  th{background:var(--navy);color:#fff;font-weight:600;}
+  tbody tr:nth-child(even){background:#f7f9fc;}
+  tr.hl td{background:var(--accent-soft);font-weight:600;}
+  .note{
+    background:#eaf4ff;
+    border:1px solid #c8e0fb;
+    border-radius:10px;
+    padding:13px 16px;
+    margin:14px 0;
+    color:#123f6b;
+  }
+  .warn{
+    background:#fdeeee;
+    border:1px solid #f5c6c6;
+    border-radius:10px;
+    padding:13px 16px;
+    margin:14px 0;
+    color:#7a2323;
+  }
+  .pinyin{color:var(--muted);font-size:.85rem;}
+  .sources{font-size:.92rem;}
+  .sources ol{padding-left:20px;margin:10px 0 0;}
+  .sources li{margin:7px 0;word-break:break-all;}
+  .sources a{word-break:break-all;}
+  .qr-block{text-align:center;margin:24px 0 8px;}
+  .qr-block img{width:190px;height:190px;border:8px solid #fff;border-radius:12px;box-shadow:0 2px 10px rgba(16,42,67,.15);}
+  .qr-block p{color:var(--muted);font-size:.9rem;margin:10px 0 0;}
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.85rem;
+    padding:20px 18px 44px;
+  }
+  @media (max-width:520px){
+    .hero h1{font-size:1.5rem;}
+    th,td{padding:8px 8px;font-size:.86rem;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="kicker">International Student Guide</span>
+  <h1>Dorm Repairs &amp; Electricity in China</h1>
+  <p class="sub">A short, practical answer for international students who need help with a broken socket, light or air conditioner.</p>
+</header>
+
+<div class="wrap">
+
+  <div class="question">
+    <span class="qlabel">The question</span>
+    <p>“The socket, light, or air conditioner in my room is not working. How do I request a repair?”</p>
+  </div>
+
+  <section class="card">
+    <h2><span class="ico">🔧</span>How to request a repair</h2>
+    <p class="lead">Most Chinese universities let you report a fault through one of these three channels. Use whichever your school offers — the building front desk is the fastest for urgent problems.</p>
+
+    <div class="channel">
+      <h3>1 · Building front desk / duty room <span class="tag">（宿管 / 值班室）</span></h3>
+      <p>Go to the front desk of your dormitory building (usually on the ground floor). Tell the staff your room number and what is broken. For emergencies — like a total power failure or a leak — go in person or call the duty number immediately.</p>
+    </div>
+
+    <div class="channel">
+      <h3>2 · Online repair platform <span class="tag">（网上报修）</span></h3>
+      <p>Most schools have a repair service inside their official WeChat account, a mini-program or an app (look for “报修” = “repair request”). Fill in your building &amp; room number, choose the type (electricity / light / air conditioner), describe the fault, add your contact and a photo if possible, then submit. You get a repair order and can track its progress.</p>
+    </div>
+
+    <div class="channel">
+      <h3>3 · Repair hotline / apartment service centre <span class="tag">（后勤报修热线）</span></h3>
+      <p>Many campuses publish a repair or logistics hotline. International students can also ask the Overseas Students Office or the International Services Center for help.</p>
+    </div>
+
+    <h2 style="margin-top:26px;"><span class="ico">📋</span>What happens next</h2>
+    <ol class="steps">
+      <li data-n="1">You submit the request (in person, online, or by phone).</li>
+      <li data-n="2">The maintenance department reviews the order (接单) and assigns a worker.</li>
+      <li data-n="3">A worker comes to your room — routine faults are usually fixed within about 24–48 hours.</li>
+      <li data-n="4">You check the result and confirm (or rate) the repair when it is done.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">🗣️</span>Useful phrases to say it in Chinese</h2>
+    <p class="lead">You can show these to the front-desk staff or type them into the repair form.</p>
+    <table>
+      <thead><tr><th>Meaning</th><th>Chinese</th><th>Pronunciation</th></tr></thead>
+      <tbody>
+        <tr><td>My socket is broken</td><td>我的插座坏了</td><td class="pinyin">wǒ de chāzuò huài le</td></tr>
+        <tr><td>My light doesn't turn on</td><td>我的灯不亮了</td><td class="pinyin">wǒ de dēng bú liàng le</td></tr>
+        <tr><td>My air conditioner isn't working</td><td>我的空调不工作了</td><td class="pinyin">wǒ de kōngtiáo bù gōngzuò le</td></tr>
+        <tr><td>I'd like to request a repair</td><td>我要报修</td><td class="pinyin">wǒ yào bàoxiū</td></tr>
+        <tr><td>I live in Building X, Room X</td><td>我住在 X 号楼 X 房间</td><td class="pinyin">wǒ zhù zài X hào lóu X fángjiān</td></tr>
+        <tr><td>When can someone come to fix it?</td><td>什么时候能来修？</td><td class="pinyin">shénme shíhou néng lái xiū?</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">⚡</span>China's electricity — quick facts</h2>
+    <ul class="tips">
+      <li><strong>Voltage:</strong> 220 V</li>
+      <li><strong>Frequency:</strong> 50 Hz</li>
+      <li><strong>Sockets / plugs:</strong> Type A, C and I — Type I (three flat pins in a “V”) is the most common.</li>
+    </ul>
+
+    <div class="warn">
+      <strong>⚠ Check your devices first.</strong> If you brought a charger or appliance from a 100–120 V country (e.g. the US or Japan), make sure it says <em>“100–240 V”</em> — most phone and laptop chargers do. If it only says <em>“120 V”</em>, you need a voltage converter; plugging it in directly can damage it.
+    </div>
+
+    <div class="note">
+      <strong>💡 Before reporting a “broken” socket:</strong> try another device in the same socket, and check whether a circuit breaker in your room has tripped (push the switch back to ON). This often fixes the problem without waiting for a repair.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">🌍</span>How China compares with other countries</h2>
+    <p class="lead">Why it matters: a device bought in another country may not match China's voltage or sockets.</p>
+    <table>
+      <thead><tr><th>Country / region</th><th>Voltage</th><th>Frequency</th><th>Plug types</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td>China 🇨🇳</td><td>220 V</td><td>50 Hz</td><td>A, C, I</td></tr>
+        <tr><td>United States 🇺🇸</td><td>120 V</td><td>60 Hz</td><td>A, B</td></tr>
+        <tr><td>United Kingdom 🇬🇧</td><td>230 V</td><td>50 Hz</td><td>G</td></tr>
+        <tr><td>Japan 🇯🇵</td><td>100 V</td><td>50 / 60 Hz</td><td>A, B</td></tr>
+        <tr><td>Germany 🇩🇪</td><td>230 V</td><td>50 Hz</td><td>C, F</td></tr>
+        <tr><td>Australia 🇦🇺</td><td>230 V</td><td>50 Hz</td><td>I</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card sources">
+    <h2><span class="ico">📚</span>Sources</h2>
+    <ol>
+      <li>Electrical Safety First (UK) — “China” travel advice: <a href="https://www.electricalsafetyfirst.org.uk/safety-advice/travel-advice/china/">electricalsafetyfirst.org.uk/safety-advice/travel-advice/china</a></li>
+      <li>China Daily — “What types of power plugs do they have in China?”: <a href="https://govt.chinadaily.com.cn/s/202508/13/WS689c310e498edec913ce09c7/what-types-of-power-plugs-do-they-have-in-china-do-i-need-to-take-a-plug-adaptor-with-me-when-i-travel-in-china.html">govt.chinadaily.com.cn</a></li>
+      <li>Travel China Guide — “Power Plugs / Sockets in China”: <a href="https://www.travelchinaguide.com/essential/electricity.htm">travelchinaguide.com/essential/electricity.htm</a></li>
+      <li>AC Infinity — “The Different Travel Adapters You Need in Other Countries” (country voltage/plug comparison): <a href="https://acinfinity.com/blog/the-different-travel-adapters-you-need-in-other-countries/">acinfinity.com/blog</a></li>
+      <li>Beijing Foreign Studies University — International Students Dormitory FAQ (report channels): <a href="https://lb.bfsu.edu.cn/info/2912/4961.htm">lb.bfsu.edu.cn/info/2912/4961.htm</a></li>
+      <li>Tsinghua University — International Student Apartments Accommodation Guide (WeChat online-repair process): <a href="https://is.tsinghua.edu.cn/zhongwen-qinghuadaxueguojixueshenggongyuzhusushenghuozhinan.pdf">is.tsinghua.edu.cn (PDF)</a></li>
+      <li>Zhejiang University International Campus — Campus Operation Center FAQs: <a href="https://coc.intl.zju.edu.cn/en/content/879595">coc.intl.zju.edu.cn/en/content/879595</a></li>
+    </ol>
+  </section>
+
+  <div class="qr-block">
+    <img src="qr-code.png" alt="QR code — scan to open this page">
+    <p>Scan to open this page</p>
+  </div>
+
+  <footer>
+    Prepared by Group 4 · English class project · Updated Oct 2026
+  </footer>
+</div>
+
+</body>
+</html>
